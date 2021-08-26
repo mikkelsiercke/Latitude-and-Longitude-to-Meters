@@ -21,7 +21,7 @@ class WGSConversion:
         sin_lat = math.sin(math.pi / 180.0 * latitude)
         cos_lat = math.cos(math.pi / 180.0 * latitude)
 
-        tmp = math.sqrt(a2 * cos_lat * cos_lat * b2 * sin_lat * sin_lat)
+        tmp = math.sqrt(a2 * cos_lat * cos_lat + b2 * sin_lat * sin_lat)
 
         self.deltaX = (math.pi / 180.0) * (a2 / tmp) * cos_lat
         self.deltaY = (math.pi / 180.0) * (a2 * b2 / (tmp * tmp * tmp))
