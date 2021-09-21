@@ -10,9 +10,12 @@ converter = WGSConversion()
 
 converter.setOrigin(55.69826, 12.54283)
 
-print(converter.WGStoEN(55.69857, 12.54236))
-# Output: (34.51426310418761, -29.552666174348676)
-
 print(converter.WGStoEN(55.69964, 12.54395))
 # Output: (153.64413898097823, 70.42337471336053)
+
+print(converter.calculateENLongitude(12.54236))
+# Output: -29.552666174348676
+
+print(converter.calculateENLatitude(55.69964))
+# Output: 153.64413898097823
 ```
